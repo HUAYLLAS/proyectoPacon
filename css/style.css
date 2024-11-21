@@ -1,0 +1,671 @@
+/*=============== Variables de color ===============*/
+:root {
+	--primary-dark: #1c2a39;
+	--primary-light: #4da6ff;
+	--bg-light: #f9fbfd;
+	--bg-dark: #243447;
+	--text-light: #ffffff;
+	--text-dark: #333333;
+	--button-hover: #3a87ed;
+	--hamburger-border: #4da6ff;
+}
+/*=============== Tipografía global ===============*/
+* {
+	/* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: 'Exo', sans-serif;
+
+}
+
+body {
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*=============== Modo claro/oscuro del cuerpo ===============*/
+
+body.light-mode {
+	background-color: var(--bg-light);
+	color: #000;
+}
+
+body.dark-mode {
+	background-color: #171717;
+	color: var(--text-light);
+}
+
+
+/*Icono del boton del tema*/
+
+#themeToggle i {
+	transition: color 0.3s, text-shadow 0.3s;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);/* Sombra ligera */
+}
+
+/* Navbar y menú desplegable */
+
+.navbar.light-mode, .dropdown-menu.light-mode {
+	background-color: #f4f7fb;
+	color: #000;
+}
+
+.navbar.dark-mode, .dropdown-menu.dark-mode {
+	background-color: var(--primary-dark);
+	color: var(--text-light);
+}
+
+.nav-link, .btn {
+	transition: color 0.3s, background-color 0.3s;
+}
+
+.section-hero h1 {
+	mix-blend-mode: lighten;
+}
+
+/* Toggler de la barra de navegación */
+
+.navbar-toggler {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-color: var(--primary-light);
+}
+
+.navbar-toggler-icon {
+	background-image: none;
+	width: 1.5em;
+	height: 1.5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+	color: inherit;
+}
+
+.navbar-toggler.light-mode .navbar-toggler-icon::after {
+	content: '\2630';
+	font-size: 1.2rem;
+	color: var(--text-dark);
+}
+
+.navbar-toggler.dark-mode .navbar-toggler-icon::after {
+	content: '\2630';
+	font-size: 1.2rem;
+	color: var(--text-light);
+}
+
+
+/* Enlaces de navegación */
+
+.nav-link {
+	color: inherit;
+}
+
+.nav-link:hover {
+	color: var(--primary-light);
+}
+
+/* Menú desplegable */
+
+.dropdown-menu {
+	background-color: var(--bg-light);
+}
+
+.dropdown-menu.dark-mode {
+	background-color: var(--bg-dark);
+	color: var(--text-light);
+}
+
+.dropdown-item:hover {
+	background-color: var(--button-hover);
+	color: var(--text-light);
+}
+
+.dropdown-menu.dark-mode .dropdown-item:hover {
+	background-color: #3a87ed;
+	color: var(--text-light);
+}
+
+/* Botones */
+
+.btn-outline-primary {
+	color: var(--primary-light);
+	border-color: var(--primary-light);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover,
+.btn-primary {
+	background-color: var(--primary-light);
+	color: var(--text-light);
+}
+
+.btn-primary:hover {
+	background-color: var(--button-hover);
+}
+
+.btn-secondary {
+	background-color: transparent;
+	border: none;
+	color: var(--text-light);
+	font-size: 1.2rem;
+}
+
+
+/* Secciones */
+
+.section-background {
+	background: linear-gradient(to right, #1c2a39, #4da6ff);
+	color: #ffffff;
+	padding: 50px 0;
+}
+
+
+/* Tipografía en secciones */
+
+h1,
+p {
+	margin-bottom: 0.5rem;
+}
+
+.section-features {
+	background-color: var(--bg-light);
+	color: var(--text-dark);
+	padding: 3rem 1rem;
+}
+
+.section-features h4 {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.section-features p {
+	font-size: 0.9rem;
+	line-height: 1.5;
+}
+
+
+/* Íconos de características */
+.section-features .feature-icon {
+	transition: transform 0.3s ease, filter 0.3s;
+}
+
+.section-features .feature-icon:hover {
+	transform: scale(1.1);
+	filter: brightness(1.2);
+}
+
+
+/* Modo oscuro en la sección de características */
+
+body.dark-mode .section-features {
+	background: var(--bg-dark);
+	color: var(--text-light);
+}
+
+body.dark-mode .feature-description {
+	color: var(--text-light);
+}
+
+
+/* Sección Hero */
+
+.section-hero {
+	background: linear-gradient(135deg, #4A90E2, #9013FE);
+	color: #fff;
+	padding: 5rem 1rem;
+}
+
+.section-hero h1 {
+	font-size: 2.5rem;
+	line-height: 1.2;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.section-hero .text-primary {
+	color: #FFD700;
+	/* Color dorado */
+}
+
+
+/* Color icon */
+
+.icon-color {
+	color: #4da6ff;
+}
+
+
+/* Pie de página */
+
+footer {
+	background-color: var(--primary-dark);
+	color: var(--text-light);
+	padding: 20px 0;
+}
+
+footer p {
+	margin: 0;
+	font-size: 0.875rem;
+}
+
+footer a.text-light:hover {
+	color: #FFD700;
+	/* Cambia a un dorado para mejor visibilidad en modo oscuro */
+	transition: color 0.3s;
+}
+
+
+/* Responsivo */
+
+@media (max-width: 991px) {
+	.navbar {
+		top: 0;
+	}
+	.container {
+		max-width: 100% !important;
+	}
+	.navbar-toggler {
+		display: inline-block;
+		border-color: var(--primary-light);
+	}
+	.auth-buttons {
+		display: flex !important;
+		align-items: center;
+		margin-left: auto;
+	}
+	.navbar-collapse {
+		flex-grow: 1;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.section-hero h1 {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.section-hero {
+		padding: 3rem 1rem;
+	}
+	.section-hero h1 {
+		font-size: 1.8rem;
+	}
+}
+
+/* Adaptaciones adicionales */
+
+@media (max-width: 576px) {
+	.feature-title {
+		font-size: 1.1rem;
+	}
+	.feature-description {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-background {
+		text-align: center;
+		padding: 30px;
+	}
+	.section-background h1 {
+		font-size: 2rem;
+	}
+	.section-background p {
+		font-size: 1rem;
+	}
+	.section-background img {
+		display: none;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.section-features h4 {
+		font-size: 1.1rem;
+	}
+	.section-features p {
+		font-size: 0.85rem;
+	}
+}
+
+
+/*=====================================================*/
+
+
+/* Texto dinámico */
+
+#dynamicText {
+	color: #3a87ed;
+	font-size: 2rem;
+	/* Ajuste de tamaño para un texto un poco más grande */
+	font-weight: bold;
+	/* Opcional: para darle un poco más de presencia */
+}
+
+.cursor {
+	display: inline-block;
+	width: 2px;
+	background-color: #3a87ed;
+	margin-left: 2px;
+	user-select: none;
+	animation: blink 0.7s steps(2) infinite;
+	caret-color: transparent;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+
+/* Botón con efecto de crecimiento al pasar el ratón */
+
+.hover-grow {
+	transition: transform 0.3s ease-in-out;
+}
+
+.hover-grow:hover {
+	transform: scale(1.05);
+}
+
+
+/* Sombra y suave animación al texto y botones */
+
+.theme-primary,
+#dynamicText,
+.lead {
+	transition: all 0.3s ease-in-out;
+}
+
+#textSection:hover .theme-primary,
+#textSection:hover #dynamicText {
+	filter: brightness(1.1);
+}
+
+
+/*============Cuando se haga scroll se sombrea el menú========================*/
+
+
+/* Sombra en modo claro */
+
+.navbar-shadow-light {
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+	/* Sombra suave */
+	transition: box-shadow 0.4s ease, background-color 0.4s ease;
+	/* Transición más suave */
+}
+
+
+/* Sombra en modo oscuro */
+
+.navbar-shadow-dark {
+	box-shadow: 0 6px 15px rgba(255, 255, 255, 0.08);
+	/* Sombra sutil en modo oscuro */
+	transition: box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+
+/* Opcional: estilo de fondo elegante */
+
+.navbar {
+	transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+/*====================== SECCTION 2 ======================*/
+
+/*=========== Modo Claro ===========*/
+
+body.light-mode .section-features {
+	background-color: #FFFFFF;
+	color: #333333;
+}
+
+body.light-mode .section-features h4 {
+	color: #3a87ed;
+}
+
+body.light-mode .section-features p {
+	color: #666;
+}
+
+/*=========== Modo Oscuro ===========*/
+
+body.dark-mode .section-features {
+	background-color: #243447;
+	color: #e0e0e0;
+}
+
+body.dark-mode .section-features h4 {
+	color: #70a1ff;
+}
+
+body.dark-mode .section-features p {
+	color: #a0a0b0;
+}
+
+
+/*====================== SECCTION 3 ======================*/
+
+/*=========== Modo Claro ===========*/
+
+body.light-mode .section-faq {
+	background-color: #e0f7fa;
+	color: #01579b;
+}
+
+body.light-mode .accordion-button {
+	color: #01579b;
+	background-color: #b3e5fc;
+	border: none;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .accordion-button:focus,
+body.light-mode .accordion-button:hover {
+	background-color: #4fc3f7;
+	color: #01579b;
+}
+
+
+/*=========== Modo Oscuro ===========*/
+
+body.dark-mode .section-faq {
+	background-color: #263238;
+	color: #b3e5fc;
+}
+
+body.dark-mode .accordion-button {
+	color: #b3e5fc;
+	background-color: #37474f;
+	border: none;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .accordion-button:focus,
+body.dark-mode .accordion-button:hover {
+	background-color: #546e7a;
+	color: #ffffff;
+}
+
+
+/* Transiciones en el acordeón */
+
+.accordion-collapse {
+	transition: all 0.3s ease;
+}
+
+
+/*====================== SECCTION 4 ======================*/
+
+/*=========== Modo Claro ===========*/
+
+body.light-mode .help-section {
+	background-color: #E0E6ED;
+	color: #2B3A4A;
+	padding: 20px;
+}
+
+body.light-mode .help-section h3 {
+	color: #2B3A4A;
+	font-weight: bold;
+}
+
+body.light-mode .help-section p {
+	color: #1F2B38;
+}
+
+body.light-mode .help-section .btn-primary {
+	background-color: #3B4E61;
+	color: #ffffff;
+	border: none;
+}
+
+body.light-mode .help-section .btn-primary:hover {
+	background-color: #2B3A4A;
+}
+
+/*=========== Modo Oscuro ===========*/
+
+body.dark-mode .help-section {
+	background-color: #1c2633;
+	color: #b0bec5;
+	padding: 20px;
+}
+
+body.dark-mode .help-section h3 {
+	color: #b0bec5;
+	font-weight: bold;
+}
+
+body.dark-mode .help-section p {
+	color: #90a4ae;
+}
+
+body.dark-mode .help-section .btn-primary {
+	background-color: #4f5b66;
+	color: #b0bec5;
+	border: none;
+}
+
+body.dark-mode .help-section .btn-primary:hover {
+	background-color: #3b4e61;
+}
+
+/* Imagen */
+
+.help-section img {
+	border-radius: 50%;
+	width: 58px;
+	height: 58px;
+	object-fit: cover;
+}
+
+/*====================== SECCTION 5 ======================*/
+
+
+/*=========== Modo Claro ===========*/
+
+body.light-mode .footer-section {
+	background-color: #e0e6ed;
+	color: #2B3A4A;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-top: 1px solid #ccc;
+}
+
+body.light-mode .footer-section h5 {
+	color: #2B3A4A;
+}
+
+body.light-mode .footer-section a {
+	color: #3b4e61;
+	text-decoration: none;
+}
+
+body.light-mode .footer-section a:hover {
+	color: #2B3A4A;
+}
+
+body.light-mode .footer-section .social-icons a {
+	color: #3b4e61;
+	font-size: 1.2rem;
+	margin-right: 15px;
+	transition: color 0.3s;
+}
+
+body.light-mode .footer-section .social-icons a:hover {
+	color: #2B3A4A;
+}
+
+
+/*=========== Modo Oscuro ===========*/
+
+body.dark-mode .footer-section {
+	background-color: #1c2633;
+	color: #b0bec5;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-top: 1px solid #444;
+}
+
+body.dark-mode .footer-section h5 {
+	color: #b0bec5;
+}
+
+body.dark-mode .footer-section a {
+	color: #90a4ae;
+	text-decoration: none;
+}
+
+body.dark-mode .footer-section a:hover {
+	color: #b0bec5;
+}
+
+body.dark-mode .footer-section .social-icons a {
+	color: #90a4ae;
+	font-size: 1.2rem;
+	margin-right: 15px;
+	transition: color 0.3s;
+}
+
+body.dark-mode .footer-section .social-icons a:hover {
+	color: #b0bec5;
+}
+
+/*=============== Estilo claro/oscuro ===============*/
+
+	.theme-icons .sun {
+		fill: #1c2a39; /* Sol negro */
+	}
+
+	.theme-icons .moon-shape,
+	.theme-icons polygon {
+		fill: #ffffff; /* Luna y estrella blancas */
+	}
+
+	.theme-icons .sun-beams {
+		stroke: #1c2a39; /* Rayos del sol en negro */
+	}
+
+	/* Control de visibilidad según el tema */
+	.theme-icons .sun {
+		display: block;
+	}
+
+	.theme-icons .moon-shape,
+	.theme-icons polygon {
+		display: none;
+	}
+
+	body.dark-mode .theme-icons .sun {
+		display: none;
+	}
+
+	body.dark-mode .theme-icons .moon-shape,
+	body.dark-mode .theme-icons polygon {
+		display: block;
+	}

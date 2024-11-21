@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página PACON</title>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Sección principal */
+    .container-fluid {
+      position: relative;
+      background: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad */
+    }
+    
+    /* Imagen de fondo */
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('Full-image-1.webp') no-repeat center center;
+      background-size: cover;
+      z-index: 1;
+      opacity: 0.8;
+    }
+    
+    /* Contenedor del contenido */
+    .content-wrapper {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+    }
+    
+    /* Eliminar el punto de las listas */
+    ul {
+      list-style: none;
+      padding: 0;  /* Opcional: elimina el relleno por defecto */
+    }
+
+    ul li {
+      margin-bottom: 10px;  /* Espaciado entre los elementos de la lista */
+    }
+
+    /* Cambios para dispositivos grandes */
+    @media (min-width: 992px) {
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Texto a la izquierda */
+      }
+    
+      #textSection {
+        align-items: flex-start; /* Alinea texto a la izquierda */
+        text-align: start;
+        padding-left: 50px; /* Espaciado lateral */
+      }
+    }
+    
+    /* Cambios para dispositivos móviles y tabletas */
+    @media (max-width: 991px) {
+      .background-image {
+        background-position: right center; /* Centra la parte derecha de la imagen */
+        background-size: cover; /* Mantiene la imagen cubriendo toda la sección */
+      }
+    
+      #textSection {
+        padding-top: 80px; /* Asegura que el texto no se superponga al menú */
+        text-align: center;
+      }
+    
+      .content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      /* Sombreado en modo móvil */
+      .section-mobile {
+        background: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad */
+        backdrop-filter: blur(5px); /* Agrega desenfoque */
+      }
+    }
+
+    /*=====================================*/
+ 
+    /* Modo Claro */
+    .topsection {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    /* Modo Oscuro */
+    body.dark-mode .topsection {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    body.dark-mode .section-features {
+      background-color: var(--primary-dark);
+      color: var(--text-light);
+    }
+
+    </style>
+
+</head>
+<body class="light-mode">
+
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top light-mode">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Logo" width="200"></a>
+
+        <button class="navbar-toggler light-mode" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto ms-3">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                <i class="fas fa-layer-group"></i> Soluciones
+              </a>
+              <ul class="dropdown-menu light-mode" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="facturacion.html"><i class="fas fa-chart-line"></i> Facturación</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-chart-bar"></i> Contabilidad</a></li>
+                <li><a class="dropdown-item" href="puntoventa.html"><i class="fas fa-wallet"></i> Punto de venta</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-users"></i> Recursos Humanos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Planes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+          </ul>
+          <div class="d-flex align-items-center auth-buttons">
+            <a class="btn btn-outline-primary me-2" href="#">Ingresar</a>
+            <a class="btn btn-primary" href="#">Crear Cuenta</a>
+            <button id="themeToggle" class="btn btn-secondary ms-3" onclick="toggleMode()">
+              <i class="fas fa-moon"></i>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <section class="container-fluid my-0 p-0 vh-100 overflow-hidden position-relative section-mobile">
+    <!-- Imagen de fondo -->
+    <div class="background-image"></div>
+  
+    <!-- Contenido -->
+    <div class="content-wrapper h-100">
+      <div class="row align-items-center h-100 mx-0">
+        <!-- Texto y contenido -->
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center px-6 text-center text-md-start" id="textSection">
+          <h1 class="display-5 fw-bold mb-4 theme-primary">El punto de vender, es hacerlo rápido y sin límites</h1>
+          <p class="lead theme-muted mb-4">¡Vívelo con PACON! Tus facturas y boletas en segundos, tu efectivo  y stock siempre al día. Vende más así estés en hora pico.</p>
+          
+          <!-- Botón de Llamado a la Acción -->
+          <a href="contacto.html" class="btn btn-primary btn-lg text-uppercase px-4 py-2 shadow-lg hover-grow">Contáctenos</a>
+  
+          <ul class="py-5">
+            <li><i class="fas fa-check icon-color me-2"></i> Facturación Electrónica ilimitada - OSE.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="container-fluid py-5 section-features">
+    <div class="container text-center">
+      <div class="row gy-4">
+        <div class="col-12 col-md-4">
+          <i class="fas fa-laptop-code fa-3x mb-3"></i>
+          <h4 class="text-primary fw-semibold">Sin instalación</h4>
+          <p>Accede a tu información desde cualquier computadora, tablet o celular.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <!-- <img src="https://via.placeholder.com/80" alt="Icono Soporte" class="feature-icon mb-3"> -->
+          <i class="fas fa-headset fa-3x mb-3"></i>
+          <h4 class="text-primary fw-semibold">Soporte gratis 24/7</h4>
+          <p>Recibe soporte de un equipo especializado los 365 días del año.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <!-- <img src="https://via.placeholder.com/80" alt="Icono SUNAT" class="feature-icon mb-3"> -->
+          <i class="fas fa-warehouse fa-3x mb-3"></i>
+          <h4 class="text-primary fw-semibold">Al día con la SUNAT</h4>
+          <p>Cumple fácil con cada requisito fiscal mediante actualizaciones automáticas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container-fluid py-5 topsection">
+    <div class="container">
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-md-8">
+          <h3 class="fw-bold mb-4">PACON Punto de venta es todo lo que buscas en un sistema de ventas</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="container-fluid py-5 section-features">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Columna de texto y lista de características, ordenada después en pantallas medianas y grandes -->
+        <div class="col-12 col-lg-6 order-lg-2  mb-4 mb-lg-0">
+          <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center mb-3">
+            <div>
+              <h2 class="fw-bold mb-1">¿Tener claras tus cuentas?</h2>
+            </div>
+          </div>
+            
+          <!-- Lista de características -->
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Usa, tablet o laptop como terminal de venta.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Controla tu efectivo con aperturas y cierres de caja.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Administra fácil tu stock y ordénalo en almacenes.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Accede a reportes de ventas y stock.</li>
+          </ul>
+          
+          <!-- Botones -->
+          <a href="#" class="btn btn-primary me-2 mb-2 mb-sm-0">Empezar Ahora</a>
+          <!-- <a href="#" class="btn btn-outline-primary">Conoce Más</a> -->
+
+        </div>
+
+        <!-- Columna de imagen, ordenada primero en pantallas medianas y grandes -->
+        <div class="col-12 col-lg-6 order-lg-1 mb-4 mb-lg-0">
+          <img src="Frame-54767.webp" class="img-fluid rounded shadow w-100" alt="Ventajas de nuestro servicio">
+        </div>
+
+      </div>
+    </div>
+  </section> 
+
+
+  <section class="container-fluid py-5 section-features">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Columna de texto y lista de características -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+          <div>
+            <h2 class="fw-bold mb-4">¿Facturar sin barreras?</h2>
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-start mb-3">
+                <i class="fas fa-check text-primary me-3"></i>
+                <span>Crea facturas y boletas electrónicas con un clic.</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="fas fa-check text-primary me-3"></i>
+                <span>Registra clientes con solo colocar su DNI o RUC.</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="fas fa-check text-primary me-3"></i>
+                <span>Agrega el logo de tu marca en tus comprobantes.</span>
+              </li>
+              <li class="d-flex align-items-start mb-3">
+                <i class="fas fa-check text-primary me-3"></i>
+                <span>Cumple al instante con cada requisito de la SUNAT.</span>
+              </li>
+            </ul>
+            <!-- Botones -->
+            <div class="d-flex flex-column flex-sm-row">
+              <a href="#" class="btn btn-primary me-sm-3 mb-2 mb-sm-0">Empezar Ahora</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Columna de imagen -->
+        <div class="col-12 col-lg-6">
+          <img src="Group-2547.webp" class="img-fluid rounded shadow w-100" alt="Ventajas de nuestro servicio">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+
+  <!-- Pie de página dos -->
+
+  <section class="footer-section container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Acerca de -->
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h5 class="fw-bold">Acerca de Nosotros</h5>
+                <p>Somos una plataforma dedicada a ofrecer soluciones innovadoras para facilitar tus tareas diarias. Nuestro equipo está comprometido con la calidad y el servicio al cliente.</p>
+            </div>
+
+            <!-- Navegación Rápida -->
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h5 class="fw-bold">Navegación Rápida</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto y Redes Sociales -->
+            <div class="col-lg-4">
+                <h5 class="fw-bold">Contáctanos</h5>
+                <p>Email: contacto@ejemplo.com</p>
+                <p>Teléfono: +51 123 456 789</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div class="container text-center py-3">
+      <p>© 2024 PACON. Todos los derechos reservados.</p>
+      <p>Síguenos en:
+        <a href="#" class="text-light mx-2"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+      </p>
+    </div>
+  </footer>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+

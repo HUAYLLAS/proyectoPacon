@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página PACON</title>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="light-mode">
+
+  <!--===================== Header =====================-->
+
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top light-mode">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Logo" width="200"></a>
+
+        <button class="navbar-toggler light-mode" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto ms-3">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                <i class="fas fa-layer-group"></i> Soluciones
+              </a>
+              <ul class="dropdown-menu light-mode" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="facturacion.html"><i class="fas fa-chart-line"></i> Facturación</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-chart-bar"></i> Contabilidad</a></li>
+                <li><a class="dropdown-item" href="puntoventa.html"><i class="fas fa-wallet"></i> Punto de venta</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-users"></i> Recursos Humanos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Planes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+          </ul>
+          <div class="d-flex align-items-center auth-buttons">
+            <a class="btn btn-outline-primary me-2" href="#">Ingresar</a>
+            <a class="btn btn-primary" href="#">Crear Cuenta</a>
+            <!--=============== Modo black/white ===============-->
+            <button id="themeToggle" class="btn theme-icons" onclick="toggleMode()">
+              <svg class="sun-and-moon" aria-hidden="true" width="35" height="35" viewBox="0 0 24 24">
+                <!-- Sol (Negro) -->
+                <circle class="sun" cx="12" cy="12" r="6" fill="currentColor"></circle>
+                <g class="sun-beams" stroke="currentColor">
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </g>
+                <!-- Media Luna -->
+                <mask id="moon-mask">
+                  <rect x="0" y="0" width="35" height="35" fill="white"></rect>
+                  <circle cx="12" cy="12" r="6" fill="white"></circle>
+                  <circle cx="15" cy="12" r="5" fill="black"></circle>
+                </mask>
+                <circle class="moon-shape" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"></circle>
+                <polygon points="16,12 17,14 15,13 17,12 15,11" fill="currentColor"></polygon>
+              </svg>
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--===================== section banner =====================-->
+  
+  <section class="container-fluid my-0 p-0 vh-100 overflow-hidden">
+    <div class="row align-items-center h-100 mx-0">
+      
+      <!-- Columna de Texto y Llamado a la Acción -->
+      <div class="col-md-6 d-flex flex-column justify-content-center px-5 text-center text-md-start" id="textSection">
+        <h1 class="display-5 fw-bold mb-3 theme-primary">Automatiza tu negocio con</h1>
+        
+        <!-- Título Dinámico -->
+        <h1 class="fs-4 theme-secondary mb-2" id="dynamicTextContainer">
+          <span id="dynamicText"></span><span id="cursor" class="cursor">|</span>
+        </h1>
+
+        <p class="lead theme-muted mb-4">Gestiona tu negocio de manera eficiente, con un sistema ágil que facilita todas tus operaciones de forma sencilla y rápida.</p>
+        
+        <!-- Botón de Llamado a la Acción -->
+        <a href="contacto.html" class="btn btn-primary btn-lg text-uppercase px-4 py-2 shadow-lg hover-grow">Contáctenos</a>
+      </div>
+  
+      <!-- Columna de Imagen -->
+      <div class="col-md-6 p-0 d-none d-md-block">
+        <img src="alegra.webp" alt="Imagen del producto" class="img-fluid h-100 w-100 object-fit-cover">
+      </div>
+      
+    </div>
+  </section>
+  
+  <!--===================== section uno =====================-->
+  
+  <section class="container-fluid py-5 section-features">
+    <div class="container text-center">
+      <div class="row gy-4">
+        <div class="col-12 col-md-4">
+          <i class="fas fa-laptop-code fa-3x mb-3"></i>
+          <h4 class="text-primary fw-semibold">Sin instalación</h4>
+          <p>Accede a tu información desde cualquier computadora, tablet o celular.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <i class="fas fa-headset fa-3x mb-3"></i>
+          <h4 class="text-primary fw-semibold">Soporte gratis 24/7</h4>
+          <p>Recibe soporte de un equipo especializado los 365 días del año.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <i class="fas fa-warehouse fa-3x mb-3"></i>
+          <h4 class="text-primary fw-semibold">Al día con la SUNAT</h4>
+          <p>Cumple fácil con cada requisito fiscal mediante actualizaciones automáticas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--===================== section dos =====================-->
+
+  <section class="container-fluid py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Columna de texto y lista de características -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+          <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center mb-3">
+            <img src="contabilidad.png" alt="Icono" class="mb-2 mb-sm-0 me-sm-3" width="40">
+            <div>
+              <h2 class="fw-bold mb-1">PACON de Gestión</h2>
+              <p class="text-primary">Administra tu negocio de manera inteligente.</p>
+            </div>
+          </div>
+          
+          <!-- Lista de características -->
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Controla fácilmente tus ingresos, gastos y administración de inventario.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Genera facturas válidas ante la AFIP de manera sencilla.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Accede a informes detallados de ventas e inventario.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Actualiza precios, contactos y productos rápidamente.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Lleva un registro de gastos por centro de costos.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Mantén un inventario actualizado en unidades físicas y valorado en todo momento.</li>
+          </ul>
+          
+          <!-- Botones -->
+          <a href="#" class="btn btn-primary me-2 mb-2 mb-sm-0">Empezar Ahora</a>
+          <a href="#" class="btn btn-outline-primary">Conoce Más</a>
+        </div>
+        
+        <!-- Columna de imagen -->
+        <div class="col-12 col-lg-6">
+          <img src="https://via.placeholder.com/500x300" class="img-fluid rounded shadow w-100" alt="Ventajas de nuestro servicio">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--===================== section tres =====================-->
+
+  <section class="container-fluid py-5 section-features">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Columna de texto y lista de características -->
+        <div class="col-12 col-lg-6 order-lg-2  mb-4 mb-lg-0">
+          <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center mb-3">
+            <img src="gestion.png" alt="Icono" class="mb-2 mb-sm-0 me-sm-3" width="40">
+            <div>
+              <h2 class="fw-bold mb-1">PACON punto de venta</h2>
+              <p class="text-primary">Vende más rápido y fácil.</p>
+            </div>
+          </div>
+            
+          <!-- Lista de características -->
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Organiza y controla tu inventario con categorías fáciles de gestionar.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Genera tickets o facturas electrónicas rápidamente en solo dos clics.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Monitorea las ventas y repón productos para evitar desabastecimiento.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Administra varias terminales de venta desde cualquier ubicación.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Supervisa los turnos por vendedor de forma sencilla.</li>
+          </ul>
+          
+          <!-- Botones -->
+          <a href="#" class="btn btn-primary me-2 mb-2 mb-sm-0">Empezar Ahora</a>
+          <a href="#" class="btn btn-outline-primary">Conoce Más</a>
+
+        </div>
+
+        <!-- Columna de imagen -->
+        <div class="col-12 col-lg-6 order-lg-1 mb-4 mb-lg-0">
+          <img src="https://via.placeholder.com/500x300" class="img-fluid rounded shadow w-100" alt="Ventajas de nuestro servicio">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--===================== section cuatro =====================-->
+
+  <section class="container-fluid py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Columna de texto y lista de características -->
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center mb-3">
+                    <img src="planilla.png" alt="Icono" class="mb-2 mb-sm-0 me-sm-3" width="40">
+                    <div>
+                        <h2 class="fw-bold mb-1">PACON planilla</h2>
+                        <p class="text-primary">Agiliza las planillas en una sola ventana.</p>
+                    </div>
+                </div>
+
+                <!-- Lista de características -->
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Trabaja con la planilla electrónica.</li>
+                    <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Actualización AFP NET.</li>
+                    <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Actualizado con Sunat y el Ministerio del Trabajo.</li>
+                    <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Emite boletas digitales desde la web segun ley.</li>
+                    <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Genera Texto Plano para el PLAME y AFP NET.</li>
+                </ul>
+                
+                <!-- Botones -->
+                <a href="#" class="btn btn-primary me-2 mb-2 mb-sm-0">Empezar Ahora</a>
+                <a href="#" class="btn btn-outline-primary">Conoce Más</a>
+            </div>
+            
+            <!-- Columna de imagen -->
+            <div class="col-12 col-lg-6">
+                <img src="https://via.placeholder.com/500x300" class="img-fluid rounded shadow w-100" alt="Ventajas de nuestro servicio">
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!--===================== section cinco =====================-->
+
+  <section class="container-fluid py-5 help-section">
+    <div class="container">
+      <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-lg-3">
+        <!-- Imagen -->
+        <div class="d-flex">
+          <img src="logouno.png" class="img-fluid" alt="Ayuda">
+        </div>
+        <!-- Texto -->
+        <div class="text-center text-lg-start">
+          <h3 class="mt-0 mb-4 mb-lg-0">
+            ¿Necesitás ayuda antes de iniciar?
+          </h3>
+          <p class="mb-0">
+            Comunícate gratis con nuestro equipo especializado, te están esperando.
+          </p>
+        </div>
+        <!-- Botón -->
+        <div>
+          <a href="#" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer-when-downgrade">
+            <button type="button" class="btn btn-primary">
+              Contactar ahora
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--===================== section seis =====================-->
+
+  <section class="container-fluid py-5 ">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-5">Explora las Preguntas Frecuentes</h2>
+      <div class="accordion" id="faqAccordion">
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+              ¿Cómo puedo empezar a usar la plataforma?
+            </button>
+          </h2>
+          <div id="faqOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne">
+            <div class="accordion-body">
+              Es muy sencillo, solo necesitas registrarte y crear una cuenta. Luego, podrás acceder a todas las herramientas.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-controls="faqTwo">
+              ¿Cuáles son los métodos de pago disponibles?
+            </button>
+          </h2>
+          <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo">
+            <div class="accordion-body">
+              Aceptamos tarjetas de crédito, débito, y otros métodos de pago electrónicos.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeadingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-controls="faqThree">
+              ¿Mi información estará segura en la plataforma?
+            </button>
+          </h2>
+          <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree">
+            <div class="accordion-body">
+              Sí, implementamos medidas de seguridad avanzadas para proteger todos tus datos.
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!--===================== section prueba =====================-->
+
+
+  <section class="container-fluid my-4">
+    <div class="container">
+      <!-- Fila principal -->
+      <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-12 col-md-6 col-lg-6 p-3">
+          <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center mb-3">
+            <img src="contabilidad.png" alt="Icono" class="mb-2 mb-sm-0 me-sm-3" width="40">
+            <div>
+              <h2 class="fw-bold mb-1">PACON de Gestión</h2>
+              <p class="text-primary">Administra tu negocio de manera inteligente.</p>
+            </div>
+          </div>
+
+          <!-- Lista de características -->
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Controla fácilmente tus ingresos, gastos y administración de inventario.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Genera facturas válidas ante la AFIP de manera sencilla.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Accede a informes detallados de ventas e inventario.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Actualiza precios, contactos y productos rápidamente.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Lleva un registro de gastos por centro de costos.</li>
+            <li class="mb-2"><i class="fas fa-check icon-color me-2"></i> Mantén un inventario actualizado en unidades físicas y valorado en todo momento.</li>
+          </ul>
+          
+          <!-- Botones -->
+          <a href="#" class="btn btn-primary me-2 mb-2 mb-sm-0">Empezar Ahora</a>
+          <a href="#" class="btn btn-outline-primary">Conoce Más</a>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-12 col-md-6 col-lg-6 p-3 d-flex justify-content-center align-items-center">
+          <img src="https://via.placeholder.com/500x300" class="img-fluid rounded shadow" alt="Ventajas de nuestro servicio">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!--===================== section pie de página =====================-->
+
+  <section class="footer-section container-fluid py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Acerca de -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5 class="fw-bold">Acerca de Nosotros</h5>
+          <p>Somos una plataforma dedicada a ofrecer soluciones innovadoras para facilitar tus tareas diarias. Nuestro equipo está comprometido con la calidad y el servicio al cliente.</p>
+        </div>
+
+        <!-- Navegación Rápida -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5 class="fw-bold">Navegación Rápida</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto y Redes Sociales -->
+        <div class="col-lg-4">
+          <h5 class="fw-bold">Contáctanos</h5>
+          <p>Email: contacto@ejemplo.com</p>
+          <p>Teléfono: +51 123 456 789</p>
+          <div class="social-icons">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--===================== footer =====================-->
+
+  <footer>
+    <div class="container text-center py-3">
+      <p>© 2024 PACON. Todos los derechos reservados.</p>
+      <p>Síguenos en:
+        <a href="#" class="text-light mx-2"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+      </p>
+    </div>
+  </footer>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
