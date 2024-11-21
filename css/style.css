@@ -5,7 +5,8 @@
 	--bg-light: #f9fbfd;
 	--bg-dark: #243447;
 	--text-light: #ffffff;
-	--text-dark: #333333;
+	/* --text-dark: #333333; hover:#b0bec5 - normal #90a4ae */
+	--text-dark: #90a4ae;
 	--button-hover: #3a87ed;
 	--hamburger-border: #4da6ff;
 }
@@ -14,13 +15,10 @@
 	/* font-family: 'Roboto', sans-serif; */
   /* font-family: 'Orbitron', sans-serif; */
   font-family: 'Exo', sans-serif;
-
 }
-
 body {
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 /*=============== Modo claro/oscuro del cuerpo ===============*/
 
 body.light-mode {
@@ -32,20 +30,15 @@ body.dark-mode {
 	background-color: #171717;
 	color: var(--text-light);
 }
-
-
-/*Icono del boton del tema*/
-
-#themeToggle i {
-	transition: color 0.3s, text-shadow 0.3s;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);/* Sombra ligera */
-}
-
-/* Navbar y menú desplegable */
+/*=============== Modo claro/oscuro Navbar y menú desplegable ===============*/
 
 .navbar.light-mode, .dropdown-menu.light-mode {
 	background-color: #f4f7fb;
 	color: #000;
+}
+
+.dropdown-menu.light-mode .dropdown-item {
+  color: #000;
 }
 
 .navbar.dark-mode, .dropdown-menu.dark-mode {
@@ -53,21 +46,17 @@ body.dark-mode {
 	color: var(--text-light);
 }
 
-.nav-link, .btn {
-	transition: color 0.3s, background-color 0.3s;
+.dropdown-menu.dark-mode .dropdown-item {
+  color: var(--text-light);
 }
 
-.section-hero h1 {
-	mix-blend-mode: lighten;
-}
-
-/* Toggler de la barra de navegación */
+/*=============== Toggler de la barra de navegación ===============*/
 
 .navbar-toggler {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-color: var(--primary-light);
+	border-color: var(--text-dark);
 }
 
 .navbar-toggler-icon {
@@ -92,9 +81,7 @@ body.dark-mode {
 	font-size: 1.2rem;
 	color: var(--text-light);
 }
-
-
-/* Enlaces de navegación */
+/*=============== Enlaces de navegación ===============*/
 
 .nav-link {
 	color: inherit;
@@ -103,8 +90,7 @@ body.dark-mode {
 .nav-link:hover {
 	color: var(--primary-light);
 }
-
-/* Menú desplegable */
+/*=============== Menú desplegable ===============*/
 
 .dropdown-menu {
 	background-color: var(--bg-light);
@@ -124,8 +110,7 @@ body.dark-mode {
 	background-color: #3a87ed;
 	color: var(--text-light);
 }
-
-/* Botones */
+/*=============== Botones de Ingresar y crear cuenta ===============*/
 
 .btn-outline-primary {
 	color: var(--primary-light);
@@ -150,22 +135,7 @@ body.dark-mode {
 	font-size: 1.2rem;
 }
 
-
-/* Secciones */
-
-.section-background {
-	background: linear-gradient(to right, #1c2a39, #4da6ff);
-	color: #ffffff;
-	padding: 50px 0;
-}
-
-
-/* Tipografía en secciones */
-
-h1,
-p {
-	margin-bottom: 0.5rem;
-}
+/*====================== SECCTION 2 ======================*/
 
 .section-features {
 	background-color: var(--bg-light);
@@ -183,24 +153,40 @@ p {
 	line-height: 1.5;
 }
 
+/*=========== Modo Claro ===========*/
 
-/* Íconos de características */
-.section-features .feature-icon {
-	transition: transform 0.3s ease, filter 0.3s;
+body.light-mode .section-features {
+	background-color: #FFFFFF;
+	color: #333333;
 }
 
-.section-features .feature-icon:hover {
-	transform: scale(1.1);
-	filter: brightness(1.2);
+body.light-mode .section-features h4 {
+	color: #3a87ed;
 }
 
+body.light-mode .section-features p {
+	color: #666;
+}
 
-/* Modo oscuro en la sección de características */
+/*=========== Modo Oscuro ===========*/
 
 body.dark-mode .section-features {
-	background: var(--bg-dark);
-	color: var(--text-light);
+	background-color: #243447;
+	color: #e0e0e0;
 }
+
+body.dark-mode .section-features h4 {
+	color: #70a1ff;
+}
+
+body.dark-mode .section-features p {
+	color: #a0a0b0;
+}
+
+
+/* ----------------------------------------------------------------- */
+
+/* Modo oscuro en la sección de características */
 
 body.dark-mode .feature-description {
 	color: var(--text-light);
@@ -266,7 +252,7 @@ footer a.text-light:hover {
 	}
 	.navbar-toggler {
 		display: inline-block;
-		border-color: var(--primary-light);
+		/* border-color: var(--primary-light); */
 	}
 	.auth-buttons {
 		display: flex !important;
@@ -412,39 +398,6 @@ footer a.text-light:hover {
 
 .navbar {
 	transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-
-/*====================== SECCTION 2 ======================*/
-
-/*=========== Modo Claro ===========*/
-
-body.light-mode .section-features {
-	background-color: #FFFFFF;
-	color: #333333;
-}
-
-body.light-mode .section-features h4 {
-	color: #3a87ed;
-}
-
-body.light-mode .section-features p {
-	color: #666;
-}
-
-/*=========== Modo Oscuro ===========*/
-
-body.dark-mode .section-features {
-	background-color: #243447;
-	color: #e0e0e0;
-}
-
-body.dark-mode .section-features h4 {
-	color: #70a1ff;
-}
-
-body.dark-mode .section-features p {
-	color: #a0a0b0;
 }
 
 

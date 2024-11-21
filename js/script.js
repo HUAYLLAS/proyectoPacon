@@ -1,4 +1,4 @@
-/*=================== Funcion modo black/white ===================*/
+/*=================== Funcion modo oscuro/claro ===================*/
 function toggleMode() {
   const body = document.body;
   const isDarkMode = body.classList.toggle('dark-mode');
