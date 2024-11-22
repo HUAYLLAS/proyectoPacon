@@ -1,4 +1,4 @@
-/*=============== Variables de color ===============*/
+/*=============== VARIABLES DE COLOR ===============*/
 :root {
 	--primary-dark: #1c2a39;
 	--primary-light: #4da6ff;
@@ -10,7 +10,7 @@
 	--button-hover: #3a87ed;
 	--hamburger-border: #4da6ff;
 }
-/*=============== Tipografía global ===============*/
+/*=============== TIPOGRAFÁ GLOBAL ===============*/
 * {
 	/* font-family: 'Roboto', sans-serif; */
   /* font-family: 'Orbitron', sans-serif; */
@@ -19,7 +19,7 @@
 body {
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
-/*=============== Modo claro/oscuro del cuerpo ===============*/
+/*=============== MODO CLARO/OSCURO DEL CUERPO ===============*/
 
 body.light-mode {
 	background-color: var(--bg-light);
@@ -30,7 +30,7 @@ body.dark-mode {
 	background-color: #171717;
 	color: var(--text-light);
 }
-/*=============== Modo claro/oscuro Navbar y menú desplegable ===============*/
+/*=============== MODO CLARO/OSCURO NAVBAR Y MENÚ DESPLEGABLE ===============*/
 
 .navbar.light-mode, .dropdown-menu.light-mode {
 	background-color: #f4f7fb;
@@ -50,7 +50,7 @@ body.dark-mode {
   color: var(--text-light);
 }
 
-/*=============== Toggler de la barra de navegación ===============*/
+/*=============== TOGGLER BARRA DE NAVIGACIÓN ===============*/
 
 .navbar-toggler {
 	display: flex;
@@ -81,7 +81,7 @@ body.dark-mode {
 	font-size: 1.2rem;
 	color: var(--text-light);
 }
-/*=============== Enlaces de navegación ===============*/
+/*=============== ENLACES DE NAVEGACIÓN ===============*/
 
 .nav-link {
 	color: inherit;
@@ -90,7 +90,7 @@ body.dark-mode {
 .nav-link:hover {
 	color: var(--primary-light);
 }
-/*=============== Menú desplegable ===============*/
+/*=============== MENÚ DESPLEGABLE ===============*/
 
 .dropdown-menu {
 	background-color: var(--bg-light);
@@ -110,7 +110,7 @@ body.dark-mode {
 	background-color: #3a87ed;
 	color: var(--text-light);
 }
-/*=============== Botones de Ingresar y crear cuenta ===============*/
+/*=============== BOTONES DE INGRESAR Y CREAR CUENTA ===============*/
 
 .btn-outline-primary {
 	color: var(--primary-light);
@@ -135,7 +135,7 @@ body.dark-mode {
 	font-size: 1.2rem;
 }
 
-/*====================== SECCTION 2 ======================*/
+/*====================== SECCTION UNO ======================*/
 
 .section-features {
 	background-color: var(--bg-light);
@@ -183,229 +183,11 @@ body.dark-mode .section-features p {
 	color: #a0a0b0;
 }
 
-
-/* ----------------------------------------------------------------- */
-
-/* Modo oscuro en la sección de características */
-
-body.dark-mode .feature-description {
-	color: var(--text-light);
-}
-
-
-/* Sección Hero */
-
-.section-hero {
-	background: linear-gradient(135deg, #4A90E2, #9013FE);
-	color: #fff;
-	padding: 5rem 1rem;
-}
-
-.section-hero h1 {
-	font-size: 2.5rem;
-	line-height: 1.2;
-	max-width: 800px;
-	margin: 0 auto;
-}
-
-.section-hero .text-primary {
-	color: #FFD700;
-	/* Color dorado */
-}
-
-
-/* Color icon */
-
-.icon-color {
-	color: #4da6ff;
-}
-
-
-/* Pie de página */
-
-footer {
-	background-color: var(--primary-dark);
-	color: var(--text-light);
-	padding: 20px 0;
-}
-
-footer p {
-	margin: 0;
-	font-size: 0.875rem;
-}
-
-footer a.text-light:hover {
-	color: #FFD700;
-	/* Cambia a un dorado para mejor visibilidad en modo oscuro */
-	transition: color 0.3s;
-}
-
-
-/* Responsivo */
-
-@media (max-width: 991px) {
-	.navbar {
-		top: 0;
-	}
-	.container {
-		max-width: 100% !important;
-	}
-	.navbar-toggler {
-		display: inline-block;
-		/* border-color: var(--primary-light); */
-	}
-	.auth-buttons {
-		display: flex !important;
-		align-items: center;
-		margin-left: auto;
-	}
-	.navbar-collapse {
-		flex-grow: 1;
-		justify-content: center;
-	}
-}
-
-@media (max-width: 767.98px) {
-	.section-hero h1 {
-		font-size: 2rem;
-	}
-}
-
-@media (max-width: 575.98px) {
-	.section-hero {
-		padding: 3rem 1rem;
-	}
-	.section-hero h1 {
-		font-size: 1.8rem;
-	}
-}
-
-/* Adaptaciones adicionales */
-
-@media (max-width: 576px) {
-	.feature-title {
-		font-size: 1.1rem;
-	}
-	.feature-description {
-		font-size: 0.9rem;
-	}
-}
-
-@media (max-width: 767px) {
-	.section-background {
-		text-align: center;
-		padding: 30px;
-	}
-	.section-background h1 {
-		font-size: 2rem;
-	}
-	.section-background p {
-		font-size: 1rem;
-	}
-	.section-background img {
-		display: none;
-	}
-}
-
-@media (max-width: 575.98px) {
-	.section-features h4 {
-		font-size: 1.1rem;
-	}
-	.section-features p {
-		font-size: 0.85rem;
-	}
-}
-
-
-/*=====================================================*/
-
-
-/* Texto dinámico */
-
-#dynamicText {
-	color: #3a87ed;
-	font-size: 2rem;
-	/* Ajuste de tamaño para un texto un poco más grande */
-	font-weight: bold;
-	/* Opcional: para darle un poco más de presencia */
-}
-
-.cursor {
-	display: inline-block;
-	width: 2px;
-	background-color: #3a87ed;
-	margin-left: 2px;
-	user-select: none;
-	animation: blink 0.7s steps(2) infinite;
-	caret-color: transparent;
-}
-
-@keyframes blink {
-	50% {
-		opacity: 0;
-	}
-}
-
-
-/* Botón con efecto de crecimiento al pasar el ratón */
-
-.hover-grow {
-	transition: transform 0.3s ease-in-out;
-}
-
-.hover-grow:hover {
-	transform: scale(1.05);
-}
-
-
-/* Sombra y suave animación al texto y botones */
-
-.theme-primary,
-#dynamicText,
-.lead {
-	transition: all 0.3s ease-in-out;
-}
-
-#textSection:hover .theme-primary,
-#textSection:hover #dynamicText {
-	filter: brightness(1.1);
-}
-
-
-/*============Cuando se haga scroll se sombrea el menú========================*/
-
-
-/* Sombra en modo claro */
-
-.navbar-shadow-light {
-	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-	/* Sombra suave */
-	transition: box-shadow 0.4s ease, background-color 0.4s ease;
-	/* Transición más suave */
-}
-
-
-/* Sombra en modo oscuro */
-
-.navbar-shadow-dark {
-	box-shadow: 0 6px 15px rgba(255, 255, 255, 0.08);
-	/* Sombra sutil en modo oscuro */
-	transition: box-shadow 0.4s ease, background-color 0.4s ease;
-}
-
-
-/* Opcional: estilo de fondo elegante */
-
-.navbar {
-	transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-
-/*====================== SECCTION 3 ======================*/
+/*====================== SECCTION DOS ======================*/
 
 /*=========== Modo Claro ===========*/
 
-body.light-mode .section-faq {
+/* body.light-mode .section-faq {
 	background-color: #e0f7fa;
 	color: #01579b;
 }
@@ -421,12 +203,12 @@ body.light-mode .accordion-button:focus,
 body.light-mode .accordion-button:hover {
 	background-color: #4fc3f7;
 	color: #01579b;
-}
+} */
 
 
 /*=========== Modo Oscuro ===========*/
 
-body.dark-mode .section-faq {
+/* body.dark-mode .section-faq {
 	background-color: #263238;
 	color: #b3e5fc;
 }
@@ -442,15 +224,14 @@ body.dark-mode .accordion-button:focus,
 body.dark-mode .accordion-button:hover {
 	background-color: #546e7a;
 	color: #ffffff;
-}
+} */
 
 
 /* Transiciones en el acordeón */
 
-.accordion-collapse {
+/* .accordion-collapse {
 	transition: all 0.3s ease;
-}
-
+} */
 
 /*====================== SECCTION 4 ======================*/
 
@@ -518,7 +299,6 @@ body.dark-mode .help-section .btn-primary:hover {
 }
 
 /*====================== SECCTION 5 ======================*/
-
 
 /*=========== Modo Claro ===========*/
 
@@ -589,19 +369,188 @@ body.dark-mode .footer-section .social-icons a:hover {
 	color: #b0bec5;
 }
 
-/*=============== Estilo claro/oscuro ===============*/
+/* Color icon */
+
+.icon-color {
+	color: #4da6ff;
+}
+
+/*====================== PIE DE PÁGINA ======================*/
+
+footer {
+	background-color: var(--primary-dark);
+	color: var(--text-light);
+	padding: 20px 0;
+}
+
+footer p {
+	margin: 0;
+	font-size: 0.875rem;
+}
+
+footer a.text-light:hover {
+	color: #FFD700;
+	transition: color 0.3s;
+}
+
+/*====================== MEDIA QUERIES ======================*/
+
+@media (max-width: 991px) {
+	.navbar {
+		top: 0;
+	}
+	.container {
+		max-width: 100% !important;
+	}
+	.navbar-toggler {
+		display: inline-block;
+	}
+	.auth-buttons {
+		display: flex !important;
+		align-items: center;
+		margin-left: auto;
+	}
+	.navbar-collapse {
+		flex-grow: 1;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.section-hero h1 {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.section-hero {
+		padding: 3rem 1rem;
+	}
+	.section-hero h1 {
+		font-size: 1.8rem;
+	}
+}
+
+/* Adaptaciones adicionales */
+
+@media (max-width: 576px) {
+	.feature-title {
+		font-size: 1.1rem;
+	}
+	.feature-description {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-background {
+		text-align: center;
+		padding: 30px;
+	}
+	.section-background h1 {
+		font-size: 2rem;
+	}
+	.section-background p {
+		font-size: 1rem;
+	}
+	.section-background img {
+		display: none;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.section-features h4 {
+		font-size: 1.1rem;
+	}
+	.section-features p {
+		font-size: 0.85rem;
+	}
+}
+
+/*====================== TEXTO DINÁMICO ======================*/
+
+#dynamicText {
+	color: #3a87ed;
+	font-size: 2rem;
+	font-weight: bold;
+}
+.cursor {
+	display: inline-block;
+	width: 4px;
+	background-color: #3a87ed;
+	color: #3a87ed;
+	margin-left: 2px;
+	user-select: none;
+	animation: blink 0.7s steps(2) infinite;
+	caret-color: transparent;
+}
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+/*=============== BOTON EFECTO CRECIMIENTO AL PASAR RATÓN ===============*/
+
+.hover-grow {
+	transition: transform 0.3s ease-in-out;
+}
+
+.hover-grow:hover {
+	transform: scale(1.05);
+}
+
+/*=============== SOMBRA SUAVE AL TEXTO Y BOTONES ===============*/
+
+.theme-primary, #dynamicText, .lead {
+	transition: all 0.3s ease-in-out;
+}
+
+#textSection:hover .theme-primary, #textSection:hover #dynamicText {
+	filter: brightness(1.1);
+}
+
+/*==== CUANDO SE HAGA SCROLL SE SOMBREA EL MENÚ ====*/
+
+
+/*=== Sombra en modo claro ===*/
+
+.navbar-shadow-light {
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+	/* Sombra suave */
+	transition: box-shadow 0.4s ease, background-color 0.4s ease;
+	/* Transición más suave */
+}
+
+/*=== Sombra en modo oscuro ===*/
+
+.navbar-shadow-dark {
+	box-shadow: 0 6px 15px rgba(255, 255, 255, 0.08);
+	/* Sombra sutil en modo oscuro */
+	transition: box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+/*=== Opcional: estilo de fondo elegante ===*/
+
+.navbar {
+	transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+
+/*=============== ESTILO CLARO/OSCURO DEL BOTÓN ===============*/
 
 	.theme-icons .sun {
-		fill: #1c2a39; /* Sol negro */
+		fill: #1c2a39;
 	}
 
 	.theme-icons .moon-shape,
 	.theme-icons polygon {
-		fill: #ffffff; /* Luna y estrella blancas */
+		fill: #ffffff;
 	}
 
 	.theme-icons .sun-beams {
-		stroke: #1c2a39; /* Rayos del sol en negro */
+		stroke: #1c2a39;
 	}
 
 	/* Control de visibilidad según el tema */

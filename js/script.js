@@ -43,7 +43,7 @@ window.onload = function () {
   themeToggleBtn.querySelector('.sun-and-moon polygon').style.display = isDarkMode ? 'block' : 'none';
 };
 
-/*=============================*/
+/*=================== Funcion de texto dinámico ===================*/
 
 const texts = ["PACON Facturación Electrónica", "PACON Gestión", "PACON Contabilidad", "PACON Planilla"];
 let currentIndex = 0;
@@ -80,7 +80,7 @@ function typeEffect() {
 
 document.addEventListener("DOMContentLoaded", typeEffect);
 
-/*============cuando se haga scroll se sombrea el menú=================*/
+/*=================== Cuando se haga scroll se sombrea el menú ===================*/
 
 window.addEventListener("scroll", function() {
   const navbar = document.querySelector(".navbar");
@@ -100,15 +100,15 @@ window.addEventListener("scroll", function() {
 
 /*=============================*/
 // Actualizar la sombra al alternar entre modos
-document.getElementById("themeToggle").addEventListener("click", function() {
-  const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 50) {
-    if (document.body.classList.contains("dark-mode")) {
-      navbar.classList.add("navbar-shadow-dark");
-      navbar.classList.remove("navbar-shadow-light");
-    } else {
-      navbar.classList.add("navbar-shadow-light");
-      navbar.classList.remove("navbar-shadow-dark");
-    }
-  }
-});
+// document.getElementById("themeToggle").addEventListener("click", function() {
+//   const navbar = document.querySelector(".navbar");
+//   if (window.scrollY > 50) {
+//     if (document.body.classList.contains("dark-mode")) {
+//       navbar.classList.add("navbar-shadow-dark");
+//       navbar.classList.remove("navbar-shadow-light");
+//     } else {
+//       navbar.classList.add("navbar-shadow-light");
+//       navbar.classList.remove("navbar-shadow-dark");
+//     }
+//   }
+// });
